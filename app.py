@@ -12,8 +12,8 @@ def recommend(course_name, similarity_matrix, df, top_n=5):
     return similar_courses
 
 st.header('Breadth Recommendation System ')
-df= pickle.load(open('/Users/mayanksethia/Desktop/python /df.pkl','rb'))
-similarity = pickle.load(open('/Users/mayanksethia/Desktop/python /similarity.pkl','rb'))
+df= pickle.load(open('df.pkl','rb'))
+similarity = pickle.load(open('similarity.pkl','rb'))
 
 names_list = df['name'].values
 selected_name = st.selectbox(
